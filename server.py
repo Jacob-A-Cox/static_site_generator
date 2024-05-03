@@ -1,12 +1,12 @@
 import os
 import argparse
-from http.server import HTTPServer, BaseHTTPRequestHandler
+from http.server import HTTPServer, SimpleHTTPRequestHandler
 
 
 def run(
     server_class=HTTPServer,
-    handler_class=BaseHTTPRequestHandler,
-    port=8000,
+    handler_class=SimpleHTTPRequestHandler,
+    port=8888,
     directory=None,
 ):
     if directory:  # Change the current working directory if directory is specified
